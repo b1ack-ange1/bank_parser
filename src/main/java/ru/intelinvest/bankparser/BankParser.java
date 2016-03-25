@@ -24,8 +24,8 @@ import org.jsoup.select.Elements;
  */
 public class BankParser {
 
-    private static String file = "banks.csv";//"F:\\yandex_disk\\java\\projects\\TEMP\\banks.csv";
-
+    private static String file = "banks.csv";
+  
     public static void main(String[] args) {
         List<String> bankNames = new ArrayList<>();
         List<Bank> sAndP = new ArrayList<>(); // 0
@@ -48,7 +48,7 @@ public class BankParser {
             moody.get(i).setName(bankNames.get(i));
             fitch.get(i).setName(bankNames.get(i));
         }
-
+/*
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
             for (int i = 0; i < sAndP.size(); i++) {
                 writer.append(bankNames.get(i))
@@ -75,7 +75,7 @@ public class BankParser {
             }
         } catch (Exception ex) {
             Logger.getLogger(BankParser.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        }*/
     }
 
     private static void write(List<Bank> banks, String file) {
